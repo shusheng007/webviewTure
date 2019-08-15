@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_container"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_play_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="play video"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:id="@+id/btn_choose_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="choose file"
+        android:layout_marginTop="15dp"/>
+
+</LinearLayout>

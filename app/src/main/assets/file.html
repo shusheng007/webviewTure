@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>video</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+</head>
+
+<body class="app-body">
+<div>
+    选择图片
+    <input id="uploadImage" type="file" accept="image/*" name="myPhoto" onchange="PreviewImage();" >
+</div>
+<br><br>
+<div>
+    选择文件
+    <input type="file" name="myFile">
+</div>
+<br><br>
+<img id="uploadPreview"  alt="选中的图片预览" style="width: 100%;height: auto;">
+
+
+<script type="text/javascript">
+    function PreviewImage() {
+        var oFReader = new FileReader();
+        oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
+
+        oFReader.onload = function (oFREvent) {
+            document.getElementById("uploadPreview").src = oFREvent.target.result;
+        };
+    };
+</script>
+</body>
+</html>

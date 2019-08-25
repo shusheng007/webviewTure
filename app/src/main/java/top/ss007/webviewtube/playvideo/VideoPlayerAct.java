@@ -70,10 +70,10 @@ public class VideoPlayerAct extends AppCompatActivity {
         WebView.setWebContentsDebuggingEnabled(true);
         WebSettings settings = mWebView.getSettings();
         settings.setJavaScriptCanOpenWindowsAutomatically(true);
-        settings.setAppCacheEnabled(true);
         settings.setCacheMode(WebSettings.LOAD_NO_CACHE);
         settings.setAllowFileAccess(true);
         settings.setDomStorageEnabled(true);
+        settings.setUseWideViewPort(true); // 关键点
         settings.setJavaScriptEnabled(true);
         mWebView.setWebViewClient(myWebViewClient);
         mWebView.setWebChromeClient(new InsideWebChromeClient());
@@ -143,6 +143,7 @@ public class VideoPlayerAct extends AppCompatActivity {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         }
 
+        @Override
         public void onHideCustomView() {
             mWebView.setVisibility(View.VISIBLE);
             if (mCustomView == null) {
